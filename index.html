@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>~Clock </title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="index.css">
+      <script src="index.js"></script>
+    </head>
+  <style>
+    
+        #navid{
+           margin-left: 950px;
+           margin-top: -30px;
+        }
+        
+       .topnav {
+           background-color: #333;
+           overflow: hidden;
+        }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: skyblue;
+  color: black;
+  transition: 0.4s;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+a.active:hover{
+   background-color: white;
+   color: green;
+
+}
+#iconbar{
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+@media (max-width:500px){
+  #navid{
+    opacity: 0;
+    visibility: hidden;
+
+  }
+
+  
+}
+    
+     </style>
+   
+   <body>
+      <div class="topnav" id="navid">
+         <a class="active" href="index.html">Clock</a>
+         <a href="Alarm Clock.html">Alarm</a>
+         <a href="stopwatch.html">StopWatch</a>
+         <a href="timezone.html">Time Zone</a>
+       </div>
+<a href="#" id="iconbar" onclick="res_menu()"><i class="fas fa-bars"></i></a>
+
+       <!-------- Analog area --------->
+       <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+      </div>
+
+      <!----- Digital clock area  ----->
+      <div class="wrapper" id="wrapperid">
+         
+         <div class="display">
+            
+            <div id="time"></div>
+         </div>
+         <span></span>
+         <span></span>
+         </div>
+        
+      <script>
+        //Digital clock  script //
+         setInterval(()=>{
+           const time = document.querySelector(".display #time");
+           let date = new Date();
+           let hours = date.getHours();
+           let minutes = date.getMinutes();
+           let seconds = date.getSeconds();
+           let day_night = "AM";
+           if(hours > 12){
+             day_night = "PM";
+             hours = hours - 12;
+           }
+           if(seconds < 10){
+             seconds = "0" + seconds;
+           }
+           if(minutes < 10){
+             minutes = "0" + minutes;
+           }
+           if(hours < 10){
+             hours = "0" + hours;
+           }
+           time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+         });
+      </script>
+   </body>
+</html>

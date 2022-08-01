@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>~Time Zone</title>
+</head>
+<style>
+	body{
+		background-color:cadetblue;
+	}
+	div{
+height: 130px;
+width: 125px;
+background-color: bisque;
+color:brown;
+text-align: center;
+padding-top: 50px;
+border: 1px solid rgb(255, 187, 0);
+display: inline-block;
+	}
+	div:hover{
+		background-color:white;
+		color: blue;
+		transition: 0.5s;
+	}
+	span{
+		color: red;
+		font-size: 20px;
+
+	}
+	h1{
+		color: aqua;
+		margin-top: 30px;
+		margin-bottom: 50px;
+		font-size: 50px;
+	}
+</style>
+
+<body align="center">
+	<a href="index.html"><img src="back.png" width="30px" height="30px"></a>
+	
+	<h1 align="center">Global Time Zones</h1>
+	
+	<hr><hr><hr>
+	
+	<div id="1id" ></div>
+	<div id="2id"></div>
+	<div id="3id"></div>
+	<div id="4id"></div>
+	<div id="5id"></div>
+	<br><br>
+	
+	
+	<div id="6id" ></div>
+	<div id="7id"></div>
+    <div id="8id"></div>
+    <div id="9id"></div>
+    <div id="10id"></div>
+
+	<hr><hr><hr>
+
+	
+<script type="text/javascript">
+	
+	
+	function calcTime(city,offset){
+		var b=new Date();//current date,time
+		var utc=b.getTime()+(b.getTimezoneOffset()*60000);//local time and local zone 60*1000=60000
+		var nd=new Date(utc+(3600000*offset));//new zone// 60*60*1000
+		return "The local time of <br><span>"+city+"</span>  <br> GMT "
+		+offset+"<br>"+nd.toLocaleString();
+
+
+
+	}
+	
+
+setInterval(() => {
+	//get specific country time
+ document.getElementById("1id").innerHTML=(calcTime('Argentina','-3'));
+ document.getElementById("2id").innerHTML=(calcTime('Afganistan','+4.5'));
+ document.getElementById("3id").innerHTML=(calcTime('Denmark','+2'));
+ document.getElementById("4id").innerHTML=(calcTime('Japan','+9'));
+ document.getElementById("5id").innerHTML=(calcTime('India','+5.5'));
+ document.getElementById("6id").innerHTML=(calcTime('Belgium','+2'));
+ document.getElementById("7id").innerHTML=(calcTime('Saudi Arabia','+3'));
+ document.getElementById("8id").innerHTML=(calcTime('China','+8'));
+ document.getElementById("9id").innerHTML=(calcTime('USA','-4'));
+ document.getElementById("10id").innerHTML=(calcTime('London','+1'));
+	
+}, 1000);
+
+</script>
+
+
+</body>
+</html>

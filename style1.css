@@ -1,0 +1,115 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: linear-gradient(to left, #9cfbc7, #65f7a7, #00d45f);
+}
+.container{
+    margin: 100px auto;
+    text-align: center;
+}
+h1{
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+button{
+    border: 2px solid green;
+    
+    font-size: 20px;
+    width: 180px;
+    margin: 10px;
+    border-radius: 18px;
+    margin: 10px;
+    padding: 18px 10px;
+   
+    background-color: #e8f765;
+    color: coral;
+    
+}
+button:hover{
+    background-color:orange;
+    color: yellow;
+    cursor: pointer;
+   
+    transition: 0.4s;
+    border: 2px solid red;
+}
+#b11{
+    border: 2px solid yellow;
+    
+    font-size: 20px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 18px 10px;
+   
+    background-color: lightcyan;
+    color: black;
+    
+
+}
+#b11:hover{
+    background-color:silver;
+    color: yellow;
+    cursor: pointer;
+   
+    transition: 0.4s;
+    border: 2px solid red;
+}
+
+#b12{border: 2px solid orange;
+    
+    font-size: 20px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 18px 10px;
+   
+    background-color: lightcyan;
+    color:green}
+#b13{border: 2px solid orange;
+    
+    font-size: 20px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 18px 10px;
+   
+    background-color: lightcyan;
+    color: red;
+}
+
+#b12:hover{ 
+    background-color:#65c7f7;
+    color: yellow;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid red;
+}
+
+#b13:hover{
+     background-color:#65c7f7;
+    color: yellow;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid red;}
+
+
+
+#alarmTime{
+    width: 400px;
+    font-size: 20px;
+    padding: 17px 9px;
+    border-radius: 18px;
+    border: 2px solid green;
+    background-color:khaki;
+
+}
+
+#alarmTime:hover{
+    background-color:cyan;
+    transition: 0.5s;
+    border: 2px solid darkcyan;
+color: green;
+
+}
